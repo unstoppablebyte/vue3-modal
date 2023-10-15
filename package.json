@@ -1,0 +1,36 @@
+{
+  "name": "vue3-modal",
+  "description": "A modal for vue",
+  "author": "UnstopableByte",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/modal.umd.js",
+  "module": "./dist/modal.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && npm run build-scss",
+    "preview": "vite preview",
+    "build-scss": "sass src/modal.scss ./dist/modal.css && sass src/modal.scss ./dist/modal.min.css --style=compressed"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.4.0",
+    "sass": "^1.62.1",
+    "vite": "^4.3.9"
+  },
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=6.0.0"
+  },
+  "keywords": [
+    "vue",
+    "modal"
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/unstoppablebyte/vue3-modal"
+}
