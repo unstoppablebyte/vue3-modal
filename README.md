@@ -1,14 +1,14 @@
 # vue3-modal-dialog
 A modal for Vue 3.
 
-[![GitHub version](https://badge.fury.io/gh/unstoppablebyte%2Fvue3-modal.svg)](https://badge.fury.io/gh/unstoppablebyte%2Fvue3-modal)
+[![GitHub version](https://badge.fury.io/gh/unstoppablebyte%2Fvue3-modal-dialog.svg)](https://badge.fury.io/gh/unstoppablebyte%2Fvue3-modal-dialog)
 ![NPM License](https://img.shields.io/npm/l/vue3-modal-dialog)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/vue3-modal-dialog)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/vue3-modal-dialog)
-[![NPM downloads](http://img.shields.io/npm/dt/vue3-modal-dialog.svg)](https://npmjs.org/package/vue3-modal)
+[![NPM downloads](http://img.shields.io/npm/dt/vue3-modal-dialog.svg)](https://npmjs.org/package/vue3-modal-dialog)
 [![Twitter](https://img.shields.io/twitter/follow/UnstoppableByte.svg?style=social&label=@UnstoppableByte)](https://twitter.com/UnstoppableByte)
 
-[![NPM Description](https://nodei.co/npm/vue3-ios-picker.png?downloads=true&stars=true)](https://npmjs.org/package/vue3-ios-picker)
+[![NPM Description](https://nodei.co/npm/vue3-modal-dialog.png?downloads=true&stars=true)](https://npmjs.org/package/vue3-modal-dialog)
 
 ![Screen shot](https://github.com/unstoppablebyte/examples/blob/1514853bf00df6b1e2e57dc2483b155e3c7f9bb1/vue3-modal/assets/vue3-modal-screenshot.png?raw=true "screenshot")
 
