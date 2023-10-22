@@ -1,0 +1,161 @@
+.fade-overlay-enter-active,
+.fade-overlay-leave-active {
+  transition: opacity 0.3s linear;
+}
+
+.fade-overlay-enter-from,
+.fade-overlay-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-to, .fade-leave-from {
+  opacity: 1;
+}
+
+.pop-enter-active,
+.pop-leave-active {
+  transition: transform 0.3s cubic-bezier(0.5, 0, 0.5, 1), opacity 0.3s linear;
+}
+
+.pop-enter-from,
+.pop-leave-to {
+  opacity: 0;
+  transform: scale(0.3) translateY(-50%);
+}
+
+.bounce-enter-active {
+  animation: bounce-in 0.3s;
+}
+
+.bounce-leave-active {
+  animation: bounce-in 0.3s reverse;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.slide-down-enter-active, .slide-down-leave-active {
+  transition: all 0.3s;
+}
+
+.slide-down-enter-from, .slide-down-leave-to {
+  transform: translateY(-100%);
+}
+
+.slide-down-enter-to, .slide-down-leave-from {
+  transform: translateY(0);
+}
+
+.slide-up-enter-active, .slide-up-leave-active {
+  transition: all 0.3s;
+}
+
+.slide-up-enter-from, .slide-up-leave-to {
+  transform: translateY(100%);
+}
+
+.slide-up-enter-to, .slide-up-leave-from {
+  transform: translateY(0);
+}
+
+.slide-left-enter-active, .slide-left-leave-active {
+  transition: all 0.3s;
+}
+
+.slide-left-enter-from, .slide-left-leave-to {
+  transform: translateX(-100%);
+}
+
+.slide-left-enter-to, .slide-left-leave-from {
+  transform: translateX(0);
+}
+
+.slide-right-enter-active, .slide-right-leave-active {
+  transition: all 0.3s;
+}
+
+.slide-right-enter-from, .slide-right-leave-to {
+  transform: translateX(100%);
+}
+
+.slide-right-enter-to, .slide-right-leave-from {
+  transform: translateX(0);
+}
+
+.rotate-enter-active, .rotate-leave-active {
+  transition: transform 0.3s;
+}
+
+.rotate-enter-from, .rotate-leave-to {
+  transform: rotate(-180deg);
+}
+
+.rotate-enter-to, .rotate-leave-from {
+  transform: rotate(0deg);
+}
+
+.flip-y-enter-active, .flip-y-leave-active {
+  transition: transform 0.3s;
+}
+
+.flip-y-enter-from, .flip-y-leave-to {
+  transform: rotateX(-180deg);
+}
+
+.flip-y-enter-to, .flip-y-leave-from {
+  transform: rotateX(0deg);
+}
+
+.flip-x-enter-active, .flip-x-leave-active {
+  transition: transform 0.3s;
+}
+
+.flip-x-enter-from, .flip-x-leave-to {
+  transform: rotateY(-180deg);
+}
+
+.flip-x-enter-to, .flip-x-leave-from {
+  transform: rotateY(0deg);
+}
+
+.zoom-in-enter-active, .zoom-in-leave-active {
+  transition: transform 0.3s;
+}
+
+.zoom-in-enter-from, .zoom-in-leave-to {
+  transform: scale(0);
+}
+
+.zoom-in-enter-to, .zoom-in-leave-from {
+  transform: scale(1);
+}
+
+.zoom-out-enter-active, .zoom-out-leave-active {
+  transition: transform 0.3s;
+}
+
+.zoom-out-enter-from, .zoom-out-leave-to {
+  transform: scale(2);
+}
+
+.zoom-out-enter-to, .zoom-out-leave-from {
+  transform: scale(1);
+}
+
+/*# sourceMappingURL=modal-transitions.css.map */
