@@ -2,7 +2,7 @@
   "name": "vue3-modal-dialog",
   "description": "A modal for vue",
   "author": "UnstopableByte",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "main": "./dist/modal.umd.js",
   "module": "./dist/modal.js",

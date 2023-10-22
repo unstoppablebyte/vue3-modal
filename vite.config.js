@@ -10,7 +10,7 @@ export default defineConfig({
             entry: resolve(__dirname, 'src/index.js'),
             name: 'VueModal',
             // the proper extensions will be added
-            fileName: 'vue-modal',
+            fileName: 'modal',
             formats: ['es', 'cjs', 'umd'], // Include 'umd' format
         },
         rollupOptions: {
