@@ -1,11 +1,11 @@
-# vue3-modal
+# vue3-modal-dialog
 A modal for Vue 3.
 
 [![GitHub version](https://badge.fury.io/gh/unstoppablebyte%2Fvue3-modal.svg)](https://badge.fury.io/gh/unstoppablebyte%2Fvue3-modal)
-![NPM License](https://img.shields.io/npm/l/vue3-ios-picker)
-![npm bundle size](https://img.shields.io/bundlephobia/min/vue3-ios-picker)
-![npm bundle size](https://img.shields.io/bundlephobia/minzip/vue3-ios-picker)
-[![NPM downloads](http://img.shields.io/npm/dt/vue3-modal.svg)](https://npmjs.org/package/vue3-modal)
+![NPM License](https://img.shields.io/npm/l/vue3-modal-dialog)
+![npm bundle size](https://img.shields.io/bundlephobia/min/vue3-modal-dialog)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/vue3-modal-dialog)
+[![NPM downloads](http://img.shields.io/npm/dt/vue3-modal-dialog.svg)](https://npmjs.org/package/vue3-modal)
 [![Twitter](https://img.shields.io/twitter/follow/UnstoppableByte.svg?style=social&label=@UnstoppableByte)](https://twitter.com/UnstoppableByte)
 
 [![NPM Description](https://nodei.co/npm/vue3-ios-picker.png?downloads=true&stars=true)](https://npmjs.org/package/vue3-ios-picker)
