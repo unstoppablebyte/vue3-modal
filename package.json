@@ -10,7 +10,7 @@
     "dev": "vite",
     "build": "vite build && npm run build-scss",
     "preview": "vite preview",
-    "build-scss": "sass src/modal.scss ./dist/modal.css && sass src/modal.scss ./dist/modal.min.css --style=compressed"
+    "build-scss": "sass src/scss/modal.scss ./dist/modal.css && sass src/scss/modal.scss ./dist/modal.min.css --style=compressed && sass src/scss/modal-transitions.scss ./dist/modal-transitions.css && sass src/scss/modal-transitions.scss ./dist/modal-transitions.min.css --style=compressed"
   },
   "files": [
     "dist"
