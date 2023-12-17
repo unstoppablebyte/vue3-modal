@@ -148,7 +148,7 @@ function onEscapeClick(event) {
  */
 watch(() => props.show, (value) => {
   if(!value && props.lockHtmlScroll) {
-    document.documentElement.classList.remove("modal-open-scroll-disabled");
+    document.documentElement.classList.remove(`${props.modalClassName}-open-scroll-disabled`);
 
     return;
   }
@@ -157,7 +157,7 @@ watch(() => props.show, (value) => {
     return;
   }
 
-  document.documentElement.classList.add("modal-open-scroll-disabled");
+  document.documentElement.classList.add(`${props.modalClassName}-open-scroll-disabled`);
 });
 
 /**

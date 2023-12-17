@@ -99,10 +99,10 @@ const B = {
     }
     return N(() => e.show, (l) => {
       if (!l && e.lockHtmlScroll) {
-        document.documentElement.classList.remove("modal-open-scroll-disabled");
+        document.documentElement.classList.remove(`${e.modalClassName}-open-scroll-disabled`);
         return;
       }
-      e.lockHtmlScroll && document.documentElement.classList.add("modal-open-scroll-disabled");
+      e.lockHtmlScroll && document.documentElement.classList.add(`${e.modalClassName}-open-scroll-disabled`);
     }), g(() => {
       window.addEventListener("keydown", m);
     }), w(() => {
