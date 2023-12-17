@@ -1,12 +1,5 @@
-import { computed as d, watch as g, onMounted as S, onUnmounted as b, openBlock as t, createBlock as E, Teleport as O, createVNode as m, Transition as p, withCtx as y, createElementBlock as a, createCommentVNode as n, createElementVNode as s, normalizeClass as r, Fragment as B, toDisplayString as $, renderSlot as c } from "vue";
-const z = {
-  key: 0,
-  class: "modal",
-  role: "dialog"
-}, H = { class: "modal__title" }, M = { class: "modal__header-operations" }, L = {
-  key: 1,
-  class: "modal__header"
-}, j = {
+import { computed as n, watch as N, onMounted as g, onUnmounted as w, openBlock as o, createBlock as S, Teleport as b, createVNode as f, Transition as p, withCtx as y, createElementBlock as t, normalizeClass as a, createCommentVNode as r, createElementVNode as d, Fragment as E, toDisplayString as O, renderSlot as c } from "vue";
+const B = {
   __name: "Modal",
   props: {
     show: {
@@ -16,8 +9,8 @@ const z = {
     size: {
       type: String,
       default: "small",
-      validator(o) {
-        return ["small", "medium", "large", "full-screen"].includes(o);
+      validator(s) {
+        return ["small", "medium", "large", "full-screen"].includes(s);
       }
     },
     title: {
@@ -55,7 +48,7 @@ const z = {
     transition: {
       type: String,
       default: "fade",
-      validator(o) {
+      validator(s) {
         return [
           "fade",
           "pop",
@@ -69,112 +62,127 @@ const z = {
           "flip-y",
           "zoom-in",
           "zoom-out"
-        ].includes(o);
+        ].includes(s);
       }
     },
     lockHtmlScroll: {
       type: Boolean,
       default: !1
+    },
+    modalClassName: {
+      type: String,
+      default: "modal"
     }
   },
   emits: [
     "close"
   ],
-  setup(o, { emit: _ }) {
-    const e = o, v = d(() => `modal__${e.size}`), h = d(() => [
-      "modal__header",
+  setup(s, { emit: C }) {
+    const e = s, v = n(() => `${e.modalClassName}__${e.size}`), k = n(() => [
+      `${e.modalClassName}__header`,
       e.headerClasses
-    ]), k = d(() => [
-      "modal__body",
+    ]), h = n(() => [
+      `${e.modalClassName}__body`,
       e.bodyClasses
-    ]), C = d(() => [
-      "modal__footer",
+    ]), _ = n(() => [
+      `${e.modalClassName}__footer`,
       e.footerClasses
     ]);
     function i(l) {
-      _("close", l);
+      C("close", l);
     }
-    function w() {
+    function $() {
       e.closeOnOverlayClick && i(!1);
     }
-    function u(l) {
+    function m(l) {
       e.closeOnEscape && (l.key !== "Escape" || l.keyCode !== 27 || i(!1));
     }
-    return g(() => e.show, (l) => {
+    return N(() => e.show, (l) => {
       if (!l && e.lockHtmlScroll) {
         document.documentElement.classList.remove("modal-open-scroll-disabled");
         return;
       }
       e.lockHtmlScroll && document.documentElement.classList.add("modal-open-scroll-disabled");
-    }), S(() => {
-      window.addEventListener("keydown", u);
-    }), b(() => {
-      window.removeEventListener("keydown", u);
-    }), (l, f) => (t(), E(O, { to: "body" }, [
-      m(p, {
+    }), g(() => {
+      window.addEventListener("keydown", m);
+    }), w(() => {
+      window.removeEventListener("keydown", m);
+    }), (l, u) => (o(), S(b, { to: "body" }, [
+      f(p, {
         name: "fade-overlay",
         appear: ""
       }, {
         default: y(() => [
-          e.show ? (t(), a("div", {
+          e.show ? (o(), t("div", {
             key: 0,
-            class: "modal__overlay",
-            onClick: w
-          })) : n("", !0)
+            class: a(`${e.modalClassName}__overlay`),
+            onClick: $
+          }, null, 2)) : r("", !0)
         ]),
         _: 1
       }),
-      e.show ? (t(), a("div", z, [
-        m(p, {
+      e.show ? (o(), t("div", {
+        key: 0,
+        class: a(e.modalClassName),
+        role: "dialog"
+      }, [
+        f(p, {
           name: e.transition,
           appear: ""
         }, {
           default: y(() => [
-            s("div", {
-              class: r(["modal__dialog", [v.value]])
+            d("div", {
+              class: a(`${e.modalClassName}__dialog`, [v.value])
             }, [
-              o.hideHeader ? n("", !0) : (t(), a(B, { key: 0 }, [
-                l.$slots.header ? (t(), a("div", L, [
-                  c(l.$slots, "header")
-                ])) : (t(), a("div", {
-                  key: 0,
-                  class: r(h.value)
+              s.hideHeader ? r("", !0) : (o(), t(E, { key: 0 }, [
+                l.$slots.header ? (o(), t("div", {
+                  key: 1,
+                  class: a(`${e.modalClassName}__header`)
                 }, [
-                  s("div", H, $(e.title), 1),
-                  s("div", M, [
-                    s("a", {
+                  c(l.$slots, "header")
+                ], 2)) : (o(), t("div", {
+                  key: 0,
+                  class: a(k.value)
+                }, [
+                  d("div", {
+                    class: a(`${e.modalClassName}__title`)
+                  }, O(e.title), 3),
+                  d("div", {
+                    class: a(`${e.modalClassName}__header-operations`)
+                  }, [
+                    d("a", {
                       href: "#",
-                      class: "modal__close",
-                      onClick: f[0] || (f[0] = (F) => i(!1))
-                    })
-                  ])
+                      class: a(`${e.modalClassName}__close`),
+                      onClick: u[0] || (u[0] = (H) => i(!1))
+                    }, null, 2)
+                  ], 2)
                 ], 2))
               ], 64)),
-              s("div", {
-                class: r(k.value)
+              d("div", {
+                class: a(h.value)
               }, [
                 c(l.$slots, "default")
               ], 2),
-              !e.hideFooter && l.$slots.footer ? (t(), a("div", {
+              !e.hideFooter && l.$slots.footer ? (o(), t("div", {
                 key: 1,
-                class: r(C.value)
+                class: a(_.value)
               }, [
                 c(l.$slots, "footer")
-              ], 2)) : n("", !0)
+              ], 2)) : r("", !0)
             ], 2)
           ]),
           _: 3
         }, 8, ["name"])
-      ])) : n("", !0)
+      ], 2)) : r("", !0)
     ]));
   }
-}, A = (o) => {
-  o.component("modal", j);
-}, V = {
-  install: A
+}, z = (s) => {
+  s.component("modal", B);
+}, L = {
+  install: z
 };
 export {
-  j as Modal,
-  V as default,
-  A as install
+  B as Modal,
+  L as default,
+  z as install
 };
