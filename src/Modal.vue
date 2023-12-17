@@ -81,32 +81,36 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  modalClassName: {
+    type: String,
+    default: 'modal',
+  },
 });
 
 /**
  * Computed
  */
 const sizeClass = computed(() => {
-  return `modal__${props.size}`;
+  return `${props.modalClassName}__${props.size}`;
 });
 
 const headerClasses = computed(() => {
   return [
-    "modal__header",
+    `${props.modalClassName}__header`,
     props.headerClasses,
   ];
 });
 
 const bodyClasses = computed(() => {
   return [
-    "modal__body",
+    `${props.modalClassName}__body`,
     props.bodyClasses,
   ];
 });
 
 const footerClasses = computed(() => {
   return [
-    "modal__footer",
+    `${props.modalClassName}__footer`,
     props.footerClasses,
   ];
 });
@@ -173,35 +177,33 @@ onUnmounted(() => {
   <teleport to="body">
     <transition name="fade-overlay" appear>
       <div v-if="props.show"
-           class="modal__overlay"
+           :class="`${props.modalClassName}__overlay`"
            @click="onOverlayClick"
       />
     </transition>
 
     <div v-if="props.show"
-         class="modal"
+         :class="props.modalClassName"
          role="dialog"
     >
       <transition :name="props.transition" appear>
-        <div class="modal__dialog"
-             :class="[sizeClass]"
-        >
+        <div :class="`${props.modalClassName}__dialog`, [sizeClass]">
           <template v-if="!hideHeader">
             <template v-if="!$slots.header">
               <div :class="headerClasses">
-                <div class="modal__title">
+                <div :class="`${props.modalClassName}__title`">
                   {{ props.title }}
                 </div>
-                <div class="modal__header-operations">
+                <div :class="`${props.modalClassName}__header-operations`">
                   <a href="#"
-                     class="modal__close"
+                     :class="`${props.modalClassName}__close`"
                      @click="updateModalState(false)"
                   />
                 </div>
               </div>
             </template>
             <div v-else
-                 class="modal__header"
+                 :class="`${props.modalClassName}__header`"
             >
               <slot name="header"/>
             </div>
